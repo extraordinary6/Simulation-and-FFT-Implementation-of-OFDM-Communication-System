@@ -1,0 +1,745 @@
+
+*** Running vivado
+    with args -log fft_ifft_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source fft_ifft_top.tcl
+
+
+****** Vivado v2018.1 (64-bit)
+  **** SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+  **** IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source fft_ifft_top.tcl -notrace
+Command: synth_design -top fft_ifft_top -part xc7vx690tffg1761-2
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7vx690t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7vx690t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 16024 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 383.379 ; gain = 103.660
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'fft_ifft_top' [C:/Users/admin/Desktop/System/Study/VLSI/lab2/verilog/fft_ifft_top.v:1]
+	Parameter N bound to: 64 - type: integer 
+	Parameter RE_W bound to: 16 - type: integer 
+	Parameter IM_W bound to: 16 - type: integer 
+WARNING: [Synth 8-3848] Net lut[17] in module/entity fft_ifft_top does not have driver. [C:/Users/admin/Desktop/System/Study/VLSI/lab2/verilog/fft_ifft_top.v:57]
+INFO: [Synth 8-6155] done synthesizing module 'fft_ifft_top' (1#1) [C:/Users/admin/Desktop/System/Study/VLSI/lab2/verilog/fft_ifft_top.v:1]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 589.516 ; gain = 309.797
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 589.516 ; gain = 309.797
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7vx690tffg1761-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 589.516 ; gain = 309.797
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7vx690tffg1761-2
+INFO: [Synth 8-5546] ROM "lev_cnt" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "data_out_valid" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:43 ; elapsed = 00:00:33 . Memory (MB): peak = 1154.695 ; gain = 874.977
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+-------------------+------------+----------+
+|      |RTL Partition      |Replication |Instances |
++------+-------------------+------------+----------+
+|1     |fft_ifft_top__GB0  |           1|     30208|
+|2     |fft_ifft_top__GB1  |           1|     37760|
+|3     |fft_ifft_top__GB2  |           1|     37760|
+|4     |fft_ifft_top__GB3  |           1|     30208|
+|5     |logic__89__GD      |           1|     30208|
+|6     |datapath__18__GD   |           1|     23934|
+|7     |logic__162__GD     |           1|     37760|
+|8     |fft_ifft_top__GB7  |           1|     48232|
+|9     |fft_ifft_top__GB8  |           1|     33007|
+|10    |fft_ifft_top__GB9  |           1|     54324|
+|11    |fft_ifft_top__GB10 |           1|     25952|
+|12    |fft_ifft_top__GB11 |           1|     40616|
+|13    |fft_ifft_top__GB12 |           1|     34632|
+|14    |fft_ifft_top__GB13 |           1|     40559|
+|15    |datapath__42__GD   |           1|     25455|
+|16    |fft_ifft_top__GB15 |           1|     48111|
+|17    |logic__151__GD     |           1|     30212|
+|18    |datapath__43__GD   |           1|     25455|
+|19    |datapath__48__GD   |           1|     25455|
+|20    |datapath__39__GD   |           1|     25455|
+|21    |fft_ifft_top__GB20 |           1|     52647|
+|22    |fft_ifft_top__GB21 |           1|     11701|
+|23    |fft_ifft_top__GB22 |           1|     30040|
+|24    |fft_ifft_top__GB23 |           1|     24368|
+|25    |fft_ifft_top__GB24 |           1|      8060|
+|26    |fft_ifft_top__GB25 |           1|     29972|
+|27    |fft_ifft_top__GB26 |           1|     10458|
++------+-------------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   4 Input    118 Bit       Adders := 3     
+	   3 Input    118 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 4     
+	   2 Input     16 Bit       Adders := 3     
+	   2 Input     15 Bit       Adders := 3     
+	   2 Input      7 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 3     
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	             1024 Bit    Registers := 2     
+	              118 Bit    Registers := 14    
+	               16 Bit    Registers := 1     
+	                7 Bit    Registers := 6     
+	                6 Bit    Registers := 3     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Multipliers : 
+	               16x118  Multipliers := 4     
++---Muxes : 
+	   2 Input   7552 Bit        Muxes := 8     
+	   2 Input   1024 Bit        Muxes := 28    
+	   2 Input     16 Bit        Muxes := 6     
+	  33 Input      7 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 3     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 8     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module fft_ifft_top 
+Detailed RTL Component Info : 
++---Adders : 
+	   4 Input    118 Bit       Adders := 3     
+	   3 Input    118 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 4     
+	   2 Input     16 Bit       Adders := 3     
+	   2 Input     15 Bit       Adders := 3     
+	   2 Input      7 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 3     
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	             1024 Bit    Registers := 2     
+	              118 Bit    Registers := 14    
+	               16 Bit    Registers := 1     
+	                7 Bit    Registers := 6     
+	                6 Bit    Registers := 3     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Multipliers : 
+	               16x118  Multipliers := 4     
++---Muxes : 
+	   2 Input   7552 Bit        Muxes := 8     
+	   2 Input   1024 Bit        Muxes := 28    
+	   2 Input     16 Bit        Muxes := 6     
+	  33 Input      7 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 3     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 8     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 3600 (col length:200)
+BRAMs: 2940 (col length: RAMB18 200 RAMB36 100)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5580] Multithreading enabled for synth_design using a maximum of 2 processes.
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 7 [C:/Users/admin/Desktop/System/Study/VLSI/lab2/verilog/fft_ifft_top.v:255]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 7 [C:/Users/admin/Desktop/System/Study/VLSI/lab2/verilog/fft_ifft_top.v:271]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 7 [C:/Users/admin/Desktop/System/Study/VLSI/lab2/verilog/fft_ifft_top.v:263]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 7 [C:/Users/admin/Desktop/System/Study/VLSI/lab2/verilog/fft_ifft_top.v:279]
+WARNING: [Synth 8-6014] Unused sequential element mut2_reg was removed.  [C:/Users/admin/Desktop/System/Study/VLSI/lab2/verilog/fft_ifft_top.v:261]
+WARNING: [Synth 8-6014] Unused sequential element mut4_reg was removed.  [C:/Users/admin/Desktop/System/Study/VLSI/lab2/verilog/fft_ifft_top.v:277]
+WARNING: [Synth 8-6014] Unused sequential element mut3_reg was removed.  [C:/Users/admin/Desktop/System/Study/VLSI/lab2/verilog/fft_ifft_top.v:269]
+WARNING: [Synth 8-6014] Unused sequential element mut1_reg was removed.  [C:/Users/admin/Desktop/System/Study/VLSI/lab2/verilog/fft_ifft_top.v:253]
+DSP Report: Generating DSP mut10, operation Mode is: A*B.
+DSP Report: operator mut10 is absorbed into DSP mut10.
+DSP Report: operator mut10 is absorbed into DSP mut10.
+DSP Report: Generating DSP mut10, operation Mode is: A*B.
+DSP Report: operator mut10 is absorbed into DSP mut10.
+DSP Report: operator mut10 is absorbed into DSP mut10.
+DSP Report: Generating DSP mut10, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator mut10 is absorbed into DSP mut10.
+DSP Report: operator mut10 is absorbed into DSP mut10.
+DSP Report: Generating DSP mut10, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator mut10 is absorbed into DSP mut10.
+DSP Report: operator mut10 is absorbed into DSP mut10.
+DSP Report: Generating DSP mut10, operation Mode is: A*B.
+DSP Report: operator mut10 is absorbed into DSP mut10.
+DSP Report: operator mut10 is absorbed into DSP mut10.
+DSP Report: Generating DSP mut10, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator mut10 is absorbed into DSP mut10.
+DSP Report: operator mut10 is absorbed into DSP mut10.
+DSP Report: Generating DSP mut10, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator mut10 is absorbed into DSP mut10.
+DSP Report: operator mut10 is absorbed into DSP mut10.
+DSP Report: Generating DSP mut30, operation Mode is: A*B.
+DSP Report: operator mut30 is absorbed into DSP mut30.
+DSP Report: operator mut30 is absorbed into DSP mut30.
+DSP Report: Generating DSP mut30, operation Mode is: A*B.
+DSP Report: operator mut30 is absorbed into DSP mut30.
+DSP Report: operator mut30 is absorbed into DSP mut30.
+DSP Report: Generating DSP mut30, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator mut30 is absorbed into DSP mut30.
+DSP Report: operator mut30 is absorbed into DSP mut30.
+DSP Report: Generating DSP mut30, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator mut30 is absorbed into DSP mut30.
+DSP Report: operator mut30 is absorbed into DSP mut30.
+DSP Report: Generating DSP mut30, operation Mode is: A*B.
+DSP Report: operator mut30 is absorbed into DSP mut30.
+DSP Report: operator mut30 is absorbed into DSP mut30.
+DSP Report: Generating DSP mut30, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator mut30 is absorbed into DSP mut30.
+DSP Report: operator mut30 is absorbed into DSP mut30.
+DSP Report: Generating DSP mut30, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator mut30 is absorbed into DSP mut30.
+DSP Report: operator mut30 is absorbed into DSP mut30.
+DSP Report: Generating DSP mut20, operation Mode is: A*B.
+DSP Report: operator mut20 is absorbed into DSP mut20.
+DSP Report: operator mut20 is absorbed into DSP mut20.
+DSP Report: Generating DSP mut20, operation Mode is: A*B.
+DSP Report: operator mut20 is absorbed into DSP mut20.
+DSP Report: operator mut20 is absorbed into DSP mut20.
+DSP Report: Generating DSP mut20, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator mut20 is absorbed into DSP mut20.
+DSP Report: operator mut20 is absorbed into DSP mut20.
+DSP Report: Generating DSP mut20, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator mut20 is absorbed into DSP mut20.
+DSP Report: operator mut20 is absorbed into DSP mut20.
+DSP Report: Generating DSP mut20, operation Mode is: A*B.
+DSP Report: operator mut20 is absorbed into DSP mut20.
+DSP Report: operator mut20 is absorbed into DSP mut20.
+DSP Report: Generating DSP mut20, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator mut20 is absorbed into DSP mut20.
+DSP Report: operator mut20 is absorbed into DSP mut20.
+DSP Report: Generating DSP mut20, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator mut20 is absorbed into DSP mut20.
+DSP Report: operator mut20 is absorbed into DSP mut20.
+DSP Report: Generating DSP mut40, operation Mode is: A*B.
+DSP Report: operator mut40 is absorbed into DSP mut40.
+DSP Report: operator mut40 is absorbed into DSP mut40.
+DSP Report: Generating DSP mut40, operation Mode is: A*B.
+DSP Report: operator mut40 is absorbed into DSP mut40.
+DSP Report: operator mut40 is absorbed into DSP mut40.
+DSP Report: Generating DSP mut40, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator mut40 is absorbed into DSP mut40.
+DSP Report: operator mut40 is absorbed into DSP mut40.
+DSP Report: Generating DSP mut40, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator mut40 is absorbed into DSP mut40.
+DSP Report: operator mut40 is absorbed into DSP mut40.
+DSP Report: Generating DSP mut40, operation Mode is: A*B.
+DSP Report: operator mut40 is absorbed into DSP mut40.
+DSP Report: operator mut40 is absorbed into DSP mut40.
+DSP Report: Generating DSP mut40, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator mut40 is absorbed into DSP mut40.
+DSP Report: operator mut40 is absorbed into DSP mut40.
+DSP Report: Generating DSP mut40, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator mut40 is absorbed into DSP mut40.
+DSP Report: operator mut40 is absorbed into DSP mut40.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\im1_p_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\im1_p_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\im1_p_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\im1_p_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\im1_p_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\im1_p_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\im1_p_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\im1_p_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\re1_p_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\re1_p_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\re1_p_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\re1_p_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\re1_p_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\re1_p_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\re1_p_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\re1_p_reg[7] )
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_20_in[1023] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_20_in[1007] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_20_in[991] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_20_in[975] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_20_in[959] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_20_in[943] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_20_in[927] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_20_in[911] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_20_in[895] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_20_in[879] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_20_in[863] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_20_in[847] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_20_in[831] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_20_in[815] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_20_in[799] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_20_in[783] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_20_in[767] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_20_in[751] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_20_in[735] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_20_in[719] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_20_in[703] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_20_in[687] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_20_in[671] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_20_in[655] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_20_in[639] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_20_in[623] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_20_in[607] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_20_in[591] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_20_in[575] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_20_in[559] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_20_in[543] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_20_in[527] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_20_in[511] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_20_in[495] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_20_in[479] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_20_in[463] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_20_in[447] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_20_in[431] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_20_in[415] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_20_in[399] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_20_in[383] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_20_in[367] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_20_in[351] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_20_in[335] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_20_in[319] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_20_in[303] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_20_in[287] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_20_in[271] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_20_in[255] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_20_in[239] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_20_in[223] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_20_in[207] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_20_in[191] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_20_in[175] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_20_in[159] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_20_in[143] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_20_in[127] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_20_in[111] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_20_in[95] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_20_in[79] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_20_in[63] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_20_in[47] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_20_in[31] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_20_in[15] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port O9[10] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port O9[3] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port O9[2] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port O9[1] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port O9[0] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_9_in[1023] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_9_in[1007] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_9_in[991] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_9_in[975] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_9_in[959] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_9_in[943] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_9_in[927] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_9_in[911] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_9_in[895] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_9_in[879] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_9_in[863] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_9_in[847] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_9_in[831] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_9_in[815] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_9_in[799] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_9_in[783] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_9_in[767] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_9_in[751] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_9_in[735] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_9_in[719] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_9_in[703] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_9_in[687] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_9_in[671] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_9_in[655] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_9_in[639] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_9_in[623] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_9_in[607] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_9_in[591] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_9_in[575] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_9_in[559] driven by constant 0
+WARNING: [Synth 8-3917] design fft_ifft_top__GB23 has port p_9_in[543] driven by constant 0
+INFO: [Common 17-14] Message 'Synth 8-3917' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-3917' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3886] merging instance 'twiddle_re_reg[0]' (FDE) to 'twiddle_re_reg[15]'
+INFO: [Synth 8-3886] merging instance 'twiddle_re_reg[1]' (FDE) to 'twiddle_re_reg[15]'
+INFO: [Synth 8-3886] merging instance 'twiddle_re_reg[2]' (FDE) to 'twiddle_re_reg[15]'
+INFO: [Synth 8-3886] merging instance 'twiddle_re_reg[3]' (FDE) to 'twiddle_re_reg[15]'
+INFO: [Synth 8-3886] merging instance 'twiddle_re_reg[4]' (FDE) to 'twiddle_re_reg[15]'
+INFO: [Synth 8-3886] merging instance 'twiddle_re_reg[5]' (FDE) to 'twiddle_re_reg[15]'
+INFO: [Synth 8-3886] merging instance 'twiddle_re_reg[6]' (FDE) to 'twiddle_re_reg[15]'
+INFO: [Synth 8-3886] merging instance 'twiddle_re_reg[7]' (FDE) to 'twiddle_re_reg[15]'
+INFO: [Synth 8-3886] merging instance 'twiddle_re_reg[8]' (FDE) to 'twiddle_re_reg[15]'
+INFO: [Synth 8-3886] merging instance 'twiddle_re_reg[9]' (FDE) to 'twiddle_re_reg[15]'
+INFO: [Synth 8-3886] merging instance 'twiddle_re_reg[10]' (FDE) to 'twiddle_re_reg[15]'
+INFO: [Synth 8-3886] merging instance 'twiddle_re_reg[11]' (FDE) to 'twiddle_re_reg[15]'
+INFO: [Synth 8-3886] merging instance 'twiddle_re_reg[12]' (FDE) to 'twiddle_re_reg[15]'
+INFO: [Synth 8-3886] merging instance 'twiddle_re_reg[13]' (FDE) to 'twiddle_re_reg[15]'
+INFO: [Synth 8-3886] merging instance 'twiddle_re_reg[14]' (FDE) to 'twiddle_re_reg[15]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\twiddle_re_reg[15] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:03:10 ; elapsed = 00:03:37 . Memory (MB): peak = 1381.398 ; gain = 1101.680
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping  Report (see note below)
++-------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name  | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|fft_ifft_top | A*B            | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fft_ifft_top | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fft_ifft_top | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fft_ifft_top | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fft_ifft_top | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fft_ifft_top | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fft_ifft_top | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fft_ifft_top | A*B            | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fft_ifft_top | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fft_ifft_top | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fft_ifft_top | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fft_ifft_top | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fft_ifft_top | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fft_ifft_top | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fft_ifft_top | A*B            | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fft_ifft_top | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fft_ifft_top | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fft_ifft_top | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fft_ifft_top | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fft_ifft_top | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fft_ifft_top | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fft_ifft_top | A*B            | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fft_ifft_top | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fft_ifft_top | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fft_ifft_top | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fft_ifft_top | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fft_ifft_top | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fft_ifft_top | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++-------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+-------------------+------------+----------+
+|      |RTL Partition      |Replication |Instances |
++------+-------------------+------------+----------+
+|1     |fft_ifft_top__GB0  |           1|     22657|
+|2     |fft_ifft_top__GB1  |           1|     30209|
+|3     |fft_ifft_top__GB2  |           1|     37760|
+|4     |fft_ifft_top__GB3  |           1|     30208|
+|5     |logic__89__GD      |           1|     30208|
+|6     |datapath__18__GD   |           1|         0|
+|7     |logic__162__GD     |           1|     30208|
+|8     |fft_ifft_top__GB7  |           1|     48149|
+|9     |fft_ifft_top__GB8  |           1|     24711|
+|10    |fft_ifft_top__GB9  |           1|     54309|
+|11    |fft_ifft_top__GB10 |           1|     24677|
+|12    |fft_ifft_top__GB11 |           1|     39980|
+|13    |fft_ifft_top__GB12 |           1|     30922|
+|14    |fft_ifft_top__GB13 |           1|     40441|
+|15    |datapath__42__GD   |           1|     25337|
+|16    |fft_ifft_top__GB15 |           1|     47367|
+|17    |logic__151__GD     |           1|     22660|
+|18    |datapath__43__GD   |           1|     24711|
+|19    |datapath__48__GD   |           1|     25337|
+|20    |datapath__39__GD   |           1|     25337|
+|21    |fft_ifft_top__GB20 |           1|     51401|
+|22    |fft_ifft_top__GB21 |           1|      7105|
+|23    |fft_ifft_top__GB22 |           1|     26969|
+|24    |fft_ifft_top__GB23 |           1|     14489|
+|25    |fft_ifft_top__GB24 |           1|      7553|
+|26    |fft_ifft_top__GB25 |           1|     27072|
+|27    |fft_ifft_top__GB26 |           1|      7434|
++------+-------------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:03:43 ; elapsed = 00:04:10 . Memory (MB): peak = 1448.781 ; gain = 1169.062
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+-------------------+------------+----------+
+|      |RTL Partition      |Replication |Instances |
++------+-------------------+------------+----------+
+|1     |fft_ifft_top__GB0  |           1|     18881|
+|2     |fft_ifft_top__GB1  |           1|     26433|
+|3     |fft_ifft_top__GB2  |           1|     30206|
+|4     |fft_ifft_top__GB3  |           1|     22654|
+|5     |logic__89__GD      |           1|     18879|
+|6     |logic__162__GD     |           1|     22654|
+|7     |fft_ifft_top__GB7  |           1|     47895|
+|8     |fft_ifft_top__GB8  |           1|     12335|
+|9     |fft_ifft_top__GB9  |           1|     42952|
+|10    |fft_ifft_top__GB10 |           1|     24677|
+|11    |fft_ifft_top__GB11 |           1|     20259|
+|12    |fft_ifft_top__GB12 |           1|     30922|
+|13    |fft_ifft_top__GB13 |           1|     40310|
+|14    |datapath__42__GD   |           1|     25206|
+|15    |fft_ifft_top__GB15 |           1|     31215|
+|16    |logic__151__GD     |           1|     11332|
+|17    |datapath__43__GD   |           1|     12335|
+|18    |datapath__48__GD   |           1|     25206|
+|19    |datapath__39__GD   |           1|     25206|
+|20    |fft_ifft_top__GB20 |           1|     40619|
+|21    |fft_ifft_top__GB21 |           1|       707|
+|22    |fft_ifft_top__GB22 |           1|      6652|
+|23    |fft_ifft_top__GB23 |           1|     13710|
+|24    |fft_ifft_top__GB24 |           1|      6925|
+|25    |fft_ifft_top__GB25 |           1|     26288|
+|26    |fft_ifft_top__GB26 |           1|      7434|
++------+-------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/admin/Desktop/System/Study/VLSI/lab2/verilog/fft_ifft_top.v:253]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/admin/Desktop/System/Study/VLSI/lab2/verilog/fft_ifft_top.v:253]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/admin/Desktop/System/Study/VLSI/lab2/verilog/fft_ifft_top.v:253]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/admin/Desktop/System/Study/VLSI/lab2/verilog/fft_ifft_top.v:269]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/admin/Desktop/System/Study/VLSI/lab2/verilog/fft_ifft_top.v:269]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/admin/Desktop/System/Study/VLSI/lab2/verilog/fft_ifft_top.v:269]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/admin/Desktop/System/Study/VLSI/lab2/verilog/fft_ifft_top.v:261]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/admin/Desktop/System/Study/VLSI/lab2/verilog/fft_ifft_top.v:261]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/admin/Desktop/System/Study/VLSI/lab2/verilog/fft_ifft_top.v:261]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/admin/Desktop/System/Study/VLSI/lab2/verilog/fft_ifft_top.v:277]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/admin/Desktop/System/Study/VLSI/lab2/verilog/fft_ifft_top.v:277]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/admin/Desktop/System/Study/VLSI/lab2/verilog/fft_ifft_top.v:277]
+INFO: [Synth 8-3886] merging instance 'i_24/i_1738' (FDCE) to 'i_24/i_1743'
+INFO: [Synth 8-3886] merging instance 'i_24/i_1739' (FDCE) to 'i_24/i_1743'
+INFO: [Synth 8-3886] merging instance 'i_24/i_1741' (FDCE) to 'i_24/i_1743'
+INFO: [Synth 8-3886] merging instance 'i_24/i_1742' (FDCE) to 'i_24/i_1743'
+INFO: [Synth 8-3886] merging instance 'i_24/i_1732' (FDCE) to 'i_24/i_1743'
+INFO: [Synth 8-3886] merging instance 'i_24/i_1733' (FDCE) to 'i_24/i_1743'
+INFO: [Synth 8-3886] merging instance 'i_24/i_1735' (FDCE) to 'i_24/i_1743'
+INFO: [Synth 8-3886] merging instance 'i_24/i_1736' (FDCE) to 'i_24/i_1743'
+INFO: [Synth 8-3886] merging instance 'i_24/i_1740' (FDCE) to 'i_24/i_1743'
+INFO: [Synth 8-3886] merging instance 'i_24/i_1743' (FDCE) to 'i_24/i_1737'
+INFO: [Synth 8-3886] merging instance 'i_24/i_1734' (FDCE) to 'i_24/i_1737'
+INFO: [Synth 8-3886] merging instance 'i_24/re1_o_reg[0]' (FDCE) to 'i_24/re2_o_reg[0]'
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/admin/Desktop/System/Study/VLSI/lab2/verilog/fft_ifft_top.v:142]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/admin/Desktop/System/Study/VLSI/lab2/verilog/fft_ifft_top.v:142]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/admin/Desktop/System/Study/VLSI/lab2/verilog/fft_ifft_top.v:142]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/admin/Desktop/System/Study/VLSI/lab2/verilog/fft_ifft_top.v:142]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/admin/Desktop/System/Study/VLSI/lab2/verilog/fft_ifft_top.v:142]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/admin/Desktop/System/Study/VLSI/lab2/verilog/fft_ifft_top.v:142]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/admin/Desktop/System/Study/VLSI/lab2/verilog/fft_ifft_top.v:142]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/admin/Desktop/System/Study/VLSI/lab2/verilog/fft_ifft_top.v:142]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/admin/Desktop/System/Study/VLSI/lab2/verilog/fft_ifft_top.v:142]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/admin/Desktop/System/Study/VLSI/lab2/verilog/fft_ifft_top.v:142]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/admin/Desktop/System/Study/VLSI/lab2/verilog/fft_ifft_top.v:142]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/admin/Desktop/System/Study/VLSI/lab2/verilog/fft_ifft_top.v:142]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/admin/Desktop/System/Study/VLSI/lab2/verilog/fft_ifft_top.v:142]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/admin/Desktop/System/Study/VLSI/lab2/verilog/fft_ifft_top.v:142]
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:04:54 ; elapsed = 00:05:21 . Memory (MB): peak = 1482.551 ; gain = 1202.832
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+-------------------+------------+----------+
+|      |RTL Partition      |Replication |Instances |
++------+-------------------+------------+----------+
+|1     |fft_ifft_top__GB0  |           1|     18881|
+|2     |fft_ifft_top__GB1  |           1|     15105|
+|3     |fft_ifft_top__GB2  |           1|     22654|
+|4     |fft_ifft_top__GB3  |           1|      7552|
+|5     |logic__89__GD      |           1|      7551|
+|6     |logic__162__GD     |           1|      7551|
+|7     |fft_ifft_top__GB7  |           1|     19454|
+|8     |fft_ifft_top__GB8  |           1|      4642|
+|9     |fft_ifft_top__GB9  |           1|     10436|
+|10    |fft_ifft_top__GB10 |           1|      8710|
+|11    |fft_ifft_top__GB11 |           1|     12445|
+|12    |fft_ifft_top__GB12 |           1|     14566|
+|13    |fft_ifft_top__GB13 |           1|     11330|
+|14    |datapath__42__GD   |           1|     10998|
+|15    |fft_ifft_top__GB15 |           1|     16525|
+|16    |logic__151__GD     |           1|      3777|
+|17    |datapath__43__GD   |           1|      4642|
+|18    |datapath__48__GD   |           1|     10998|
+|19    |datapath__39__GD   |           1|     10998|
+|20    |fft_ifft_top__GB20 |           1|     10062|
+|21    |fft_ifft_top__GB21 |           1|       400|
+|22    |fft_ifft_top__GB22 |           1|      3158|
+|23    |fft_ifft_top__GB23 |           1|      6701|
+|24    |fft_ifft_top__GB24 |           1|      2327|
+|25    |fft_ifft_top__GB25 |           1|     11628|
+|26    |fft_ifft_top__GB26 |           1|      3422|
++------+-------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/admin/Desktop/System/Study/VLSI/lab2/verilog/fft_ifft_top.v:218]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/admin/Desktop/System/Study/VLSI/lab2/verilog/fft_ifft_top.v:218]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/admin/Desktop/System/Study/VLSI/lab2/verilog/fft_ifft_top.v:218]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/admin/Desktop/System/Study/VLSI/lab2/verilog/fft_ifft_top.v:218]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/admin/Desktop/System/Study/VLSI/lab2/verilog/fft_ifft_top.v:218]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/admin/Desktop/System/Study/VLSI/lab2/verilog/fft_ifft_top.v:218]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/admin/Desktop/System/Study/VLSI/lab2/verilog/fft_ifft_top.v:218]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/admin/Desktop/System/Study/VLSI/lab2/verilog/fft_ifft_top.v:226]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/admin/Desktop/System/Study/VLSI/lab2/verilog/fft_ifft_top.v:142]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/admin/Desktop/System/Study/VLSI/lab2/verilog/fft_ifft_top.v:226]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/admin/Desktop/System/Study/VLSI/lab2/verilog/fft_ifft_top.v:142]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/admin/Desktop/System/Study/VLSI/lab2/verilog/fft_ifft_top.v:226]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/admin/Desktop/System/Study/VLSI/lab2/verilog/fft_ifft_top.v:142]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/admin/Desktop/System/Study/VLSI/lab2/verilog/fft_ifft_top.v:226]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/admin/Desktop/System/Study/VLSI/lab2/verilog/fft_ifft_top.v:142]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/admin/Desktop/System/Study/VLSI/lab2/verilog/fft_ifft_top.v:226]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/admin/Desktop/System/Study/VLSI/lab2/verilog/fft_ifft_top.v:142]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/admin/Desktop/System/Study/VLSI/lab2/verilog/fft_ifft_top.v:226]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/admin/Desktop/System/Study/VLSI/lab2/verilog/fft_ifft_top.v:142]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/admin/Desktop/System/Study/VLSI/lab2/verilog/fft_ifft_top.v:226]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/admin/Desktop/System/Study/VLSI/lab2/verilog/fft_ifft_top.v:142]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/admin/Desktop/System/Study/VLSI/lab2/verilog/fft_ifft_top.v:218]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/admin/Desktop/System/Study/VLSI/lab2/verilog/fft_ifft_top.v:142]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/admin/Desktop/System/Study/VLSI/lab2/verilog/fft_ifft_top.v:218]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/admin/Desktop/System/Study/VLSI/lab2/verilog/fft_ifft_top.v:142]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/admin/Desktop/System/Study/VLSI/lab2/verilog/fft_ifft_top.v:218]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/admin/Desktop/System/Study/VLSI/lab2/verilog/fft_ifft_top.v:142]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/admin/Desktop/System/Study/VLSI/lab2/verilog/fft_ifft_top.v:218]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/admin/Desktop/System/Study/VLSI/lab2/verilog/fft_ifft_top.v:142]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/admin/Desktop/System/Study/VLSI/lab2/verilog/fft_ifft_top.v:218]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/admin/Desktop/System/Study/VLSI/lab2/verilog/fft_ifft_top.v:142]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/admin/Desktop/System/Study/VLSI/lab2/verilog/fft_ifft_top.v:218]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/admin/Desktop/System/Study/VLSI/lab2/verilog/fft_ifft_top.v:142]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/admin/Desktop/System/Study/VLSI/lab2/verilog/fft_ifft_top.v:218]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/admin/Desktop/System/Study/VLSI/lab2/verilog/fft_ifft_top.v:142]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/admin/Desktop/System/Study/VLSI/lab2/verilog/fft_ifft_top.v:226]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/admin/Desktop/System/Study/VLSI/lab2/verilog/fft_ifft_top.v:226]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/admin/Desktop/System/Study/VLSI/lab2/verilog/fft_ifft_top.v:226]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/admin/Desktop/System/Study/VLSI/lab2/verilog/fft_ifft_top.v:226]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/admin/Desktop/System/Study/VLSI/lab2/verilog/fft_ifft_top.v:226]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/admin/Desktop/System/Study/VLSI/lab2/verilog/fft_ifft_top.v:226]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/admin/Desktop/System/Study/VLSI/lab2/verilog/fft_ifft_top.v:226]
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:05:25 ; elapsed = 00:05:55 . Memory (MB): peak = 1482.551 ; gain = 1202.832
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:05:27 ; elapsed = 00:05:57 . Memory (MB): peak = 1482.551 ; gain = 1202.832
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:05:31 ; elapsed = 00:06:01 . Memory (MB): peak = 1482.551 ; gain = 1202.832
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:05:31 ; elapsed = 00:06:01 . Memory (MB): peak = 1482.551 ; gain = 1202.832
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:33:03 ; elapsed = 00:33:34 . Memory (MB): peak = 1482.551 ; gain = 1202.832
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:33:04 ; elapsed = 00:33:35 . Memory (MB): peak = 1482.551 ; gain = 1202.832
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |BUFG    |     1|
+|2     |CARRY4  |   284|
+|3     |DSP48E1 |    28|
+|4     |LUT1    |   107|
+|5     |LUT2    |  9660|
+|6     |LUT3    | 30400|
+|7     |LUT4    |  9338|
+|8     |LUT5    | 43139|
+|9     |LUT6    | 91712|
+|10    |MUXF7   | 16907|
+|11    |MUXF8   |  1668|
+|12    |FDCE    | 18681|
+|13    |IBUF    |  2052|
+|14    |OBUF    |  2049|
++------+--------+------+
+
+Report Instance Areas: 
++------+---------+-------+-------+
+|      |Instance |Module |Cells  |
++------+---------+-------+-------+
+|1     |top      |       | 226026|
++------+---------+-------+-------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:33:04 ; elapsed = 00:33:35 . Memory (MB): peak = 1482.551 ; gain = 1202.832
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 105 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:33:04 ; elapsed = 00:33:36 . Memory (MB): peak = 1482.551 ; gain = 1202.832
+Synthesis Optimization Complete : Time (s): cpu = 00:33:04 ; elapsed = 00:33:36 . Memory (MB): peak = 1482.551 ; gain = 1202.832
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 20939 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'fft_ifft_top' is not ideal for floorplanning, since the cellview 'fft_ifft_top' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+132 Infos, 106 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:33:51 ; elapsed = 00:34:31 . Memory (MB): peak = 1643.492 ; gain = 1377.105
+INFO: [Common 17-1381] The checkpoint 'C:/Users/admin/Desktop/System/Study/VLSI/lab2/vivado/lab2/lab2.runs/synth_1/fft_ifft_top.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:25 ; elapsed = 00:00:17 . Memory (MB): peak = 1658.559 ; gain = 15.066
+INFO: [runtcl-4] Executing : report_utilization -file fft_ifft_top_utilization_synth.rpt -pb fft_ifft_top_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1658.559 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon May 15 15:28:58 2023...
